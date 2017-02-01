@@ -1,6 +1,5 @@
-package com.aerexu.test.cloud.client.business.service.cloud;
+package com.aerexu.test.cloud.core.service.serviceclient;
 
-import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;

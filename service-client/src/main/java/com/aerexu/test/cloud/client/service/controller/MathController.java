@@ -1,8 +1,6 @@
 package com.aerexu.test.cloud.client.service.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import com.aerexu.test.cloud.core.service.serviceclient.MathCompute;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -13,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
  * @version: 1.0.0
  */
 @RestController
-public class MathController {
+public class MathController implements MathCompute {
 
-    @RequestMapping(path = "add", method = RequestMethod.GET)
-    public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
+    @Override
+    public Integer add(Integer a, Integer b) {
         return a + b;
     }
 }

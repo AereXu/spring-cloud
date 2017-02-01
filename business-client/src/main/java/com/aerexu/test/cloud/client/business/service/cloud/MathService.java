@@ -1,5 +1,6 @@
 package com.aerexu.test.cloud.client.business.service.cloud;
 
+import com.aerexu.test.cloud.core.service.serviceclient.MathCompute;
 import org.springframework.cloud.netflix.feign.FeignClient;
 
 /**
