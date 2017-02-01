@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: service-client
+  profiles:
+    active: dev
+server:
+  port: 9090
+eureka:
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 10
+  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8090/eureka/
+

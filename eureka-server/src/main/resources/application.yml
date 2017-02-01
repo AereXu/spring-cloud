@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eureka-server
+  profiles:
+    active: dev
+server:
+  port: 8090
+eureka:
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 10
+  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
+
