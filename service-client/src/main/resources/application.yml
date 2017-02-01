@@ -3,6 +3,11 @@ spring:
     name: service-client
   profiles:
     active: dev
+  cloud:
+    inetutils:
+      ignored-interfaces:
+        - docker0
+        - veth.*
 server:
   port: 9090
 eureka:

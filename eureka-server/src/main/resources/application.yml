@@ -3,6 +3,11 @@ spring:
     name: eureka-server
   profiles:
     active: dev
+  cloud:
+    inetutils:
+      ignored-interfaces:
+        - docker0
+        - veth.*
 server:
   port: 8090
 eureka:
