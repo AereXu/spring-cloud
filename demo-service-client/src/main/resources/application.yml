@@ -1,6 +1,6 @@
 spring:
   application:
-    name: service-client
+    name: @project.artifactId@
   profiles:
     active: dev
   cloud:
@@ -10,13 +10,13 @@ spring:
         - veth.*
 server:
   port: 9090
+  ssl:
+    clientAuth: want
+    protocol: TLS
 eureka:
   instance:
     prefer-ip-address: true
     leaseRenewalIntervalInSeconds: 10
-  client:
-#    register-with-eureka: false
-#    fetch-registry: false
-    service-url:
-      defaultZone: http://localhost:8090/eureka/
-
+    non-secure-port-enabled: false
+    secure-port-enabled: true
+    secure-port: ${server.port}
