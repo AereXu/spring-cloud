@@ -1,10 +1,10 @@
-package ssl;
+package com.aerexu.test.cloud.core.ssl;
 
+import com.aerexu.test.cloud.core.eureka.CustomEurekaJerseyClientBuilder;
 import com.netflix.discovery.DiscoveryClient;
 import com.netflix.discovery.EurekaClientConfig;
 import com.netflix.discovery.converters.wrappers.CodecWrappers;
 import com.netflix.discovery.shared.transport.jersey.EurekaJerseyClient;
-import com.qy.insurance.cloud.core.eureka.CustomEurekaJerseyClientBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

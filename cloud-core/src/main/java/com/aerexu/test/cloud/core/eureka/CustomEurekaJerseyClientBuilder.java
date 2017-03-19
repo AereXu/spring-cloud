@@ -1,4 +1,4 @@
-package eureka;
+package com.aerexu.test.cloud.core.eureka;
 
 import com.netflix.discovery.converters.wrappers.CodecWrappers;
 import com.netflix.discovery.converters.wrappers.DecoderWrapper;

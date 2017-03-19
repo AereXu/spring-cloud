@@ -1,4 +1,4 @@
-package zipkin;
+package com.aerexu.test.cloud.core.zipkin;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.sleuth.metric.SpanMetricReporter;

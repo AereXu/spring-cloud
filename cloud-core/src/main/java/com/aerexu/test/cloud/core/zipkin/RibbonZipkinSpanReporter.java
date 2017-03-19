@@ -1,4 +1,4 @@
-package zipkin;
+package com.aerexu.test.cloud.core.zipkin;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.cloud.sleuth.metric.SpanMetricReporter;

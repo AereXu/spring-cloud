@@ -1,6 +1,6 @@
-package zipkin.config;
+package com.aerexu.test.cloud.core.zipkin.config;
 
-import com.qy.insurance.cloud.core.zipkin.RibbonZipkinSpanReporter;
+import com.aerexu.test.cloud.core.zipkin.RibbonZipkinSpanReporter;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.cloud.sleuth.metric.SpanMetricReporter;
 import org.springframework.cloud.sleuth.zipkin.ZipkinProperties;

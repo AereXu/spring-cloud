@@ -1,6 +1,5 @@
-package annotation;
+package com.aerexu.test.cloud.core.annotation;
 
-import com.qy.insurance.cloud.core.eureka.feign.FeignConfiguration;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.Documented;
@@ -13,12 +12,13 @@ import java.lang.annotation.Target;
  * @task:
  * @discrption:
  * @author: Aere
- * @date: 2017/3/2 15:31
+ * @date: 2017/3/1 10:22
  * @version: 1.0.0
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Import(FeignConfiguration.class)
-public @interface EnableFeignCustom {
+@Import({com.aerexu.test.cloud.core.ssl.DefaultSslConfig.class
+        , com.aerexu.test.cloud.core.ssl.EurekaSslConfig.class})
+public @interface EnableEurekaSSL {
 }

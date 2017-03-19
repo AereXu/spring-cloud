@@ -1,4 +1,4 @@
-package eureka.feign;
+package com.aerexu.test.cloud.core.eureka.feign;
 
 import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
