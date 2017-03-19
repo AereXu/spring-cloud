@@ -1,8 +1,8 @@
 package com.aerexu.test.cloud.client.business;
 
-
+import com.aerexu.test.cloud.client.business.config.FeignConfig;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
@@ -15,9 +15,10 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients(basePackages = "com.aerexu.test.cloud.client.business.service.cloud",
+        defaultConfiguration = FeignConfig.class)
 public class Application {
     public static void main(String[] args) {
-        new SpringApplicationBuilder(Application.class).web(true).run(args);
+        SpringApplication.run(Application.class, args);
     }
 }

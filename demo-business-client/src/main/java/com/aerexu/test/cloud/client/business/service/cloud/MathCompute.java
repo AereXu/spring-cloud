@@ -1,5 +1,6 @@
-package com.aerexu.test.cloud.core.service.serviceclient;
+package com.aerexu.test.cloud.client.business.service.cloud;
 
+import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -7,11 +8,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * @task:
  * @discrption:
- * @author: AereXu
- * @date: 2017/2/1 16:37
+ * @author: Aere
+ * @date: 2017/2/15 18:49
  * @version: 1.0.0
  */
+@FeignClient(name = "demo-service-client")
 public interface MathCompute {
-    @RequestMapping(path = "add", method = RequestMethod.GET)
+    @RequestMapping(path = "service/add", method = RequestMethod.GET)
     Integer add(@RequestParam("a") Integer a, @RequestParam("b") Integer b);
 }
