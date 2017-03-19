@@ -13,6 +13,7 @@
         <module>demo-service-client</module>
         <module>demo-business-client</module>
         <module>zipkin-server</module>
+        <module>zuul-router</module>
     </modules>
 
     <properties>
