@@ -1,6 +1,12 @@
+server:
+  port: 8100
+  ssl:
+    clientAuth: want
+    protocol: TLS
+#    enabled: false
 spring:
   application:
-    name: eureka-server
+    name: @project.artifactId@
   profiles:
     active: dev
   cloud:
@@ -8,15 +14,18 @@ spring:
       ignored-interfaces:
         - docker0
         - veth.*
-server:
-  port: 8090
 eureka:
+  server:
+    response-cache-auto-expiration-in-seconds: 60
   instance:
     prefer-ip-address: true
     leaseRenewalIntervalInSeconds: 10
-  client:
-#    register-with-eureka: false
-#    fetch-registry: false
-    service-url:
-      defaultZone: http://localhost:${server.port}/eureka/
-
+    non-secure-port-enabled: false
+    secure-port-enabled: true
+    secure-port: ${server.port}
+    healthCheckUrl: https://${eureka.hostname}:8100/health
+    statusPageUrl: https://${eureka.hostname}:8100/info
+    homePageUrl: https://${eureka.hostname}:8100/
+security:
+  basic:
+    enabled: true
