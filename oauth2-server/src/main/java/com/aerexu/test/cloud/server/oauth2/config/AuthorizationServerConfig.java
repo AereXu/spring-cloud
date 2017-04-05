@@ -34,7 +34,7 @@ import javax.sql.DataSource;
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
-    public static final String AUTH_SIGN_KEY_NAME = "insurance.cloud.auth.key";
+    public static final String AUTH_SIGN_KEY_NAME = "com.aerexu.cloud.auth.key";
 
     @Autowired
     private AuthenticationManager authenticationManager;

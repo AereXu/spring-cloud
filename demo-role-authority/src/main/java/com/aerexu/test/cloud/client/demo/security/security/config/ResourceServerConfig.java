@@ -32,7 +32,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
-    private static final String sqlSelectKey = "SELECT property_value FROM t_sys_property_resource WHERE property_name='insurance.cloud.auth.key'";
+    private static final String sqlSelectKey = "SELECT property_value FROM t_sys_property_resource WHERE property_name='com.aerexu.cloud.auth.key'";
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
